@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link key={link.path} href={link.path}>
             <span
               style={{
-                color: pathname === link.path ? "#685AFF" : "inherit",
+                color: pathname === link.path ? "#2dd486" : "inherit",
               }}
             >
               {link.name}

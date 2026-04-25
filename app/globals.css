@@ -65,22 +65,23 @@ section {
    BUTTON
 ========================= */
 .btn-primary {
-  background: #685aff;
+  background: #436E44;
   color: white;
   padding: 10px 20px;
   margin-right: 10px;
   text-decoration: none;
   border-radius: 6px;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn-primary:hover {
-  background: #4f46e5;
+  background: #436E44;
 }
 
 .btn-secondary {
-  border: 1px solid #685aff;
-  color: #685aff;
+  border: 1px solid #436E44;
+  color: #436E44;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 6px;
@@ -88,7 +89,7 @@ section {
 }
 
 .btn-secondary:hover {
-  background: #685aff;
+  background: #436E44;
   color: white;
 }
 
@@ -135,6 +136,10 @@ section {
 .cta {
   padding: 80px 20px;
   margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 /* =========================
@@ -173,7 +178,7 @@ section {
 .link {
   display: inline-block;
   margin-top: 20px;
-  color: #685aff;
+  color: #436E44;
   text-decoration: none;
 }
 
@@ -221,7 +226,7 @@ section {
 }
 
 .footer a:hover {
-  color: #685aff;
+  color: #2dd486;
 }
 
 .footer-bottom {
