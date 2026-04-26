@@ -42,6 +42,7 @@ export default function Footer() {
         <div>
           <h3 style={styles.heading}>Eksplorasi</h3>
           <ul style={styles.list}>
+            <li><Link href="/home" style={styles.link}>Home</Link></li>
             <li><Link href="/about" style={styles.link}>About</Link></li>
             <li><Link href="/services" style={styles.link}>Services</Link></li>
           </ul>
