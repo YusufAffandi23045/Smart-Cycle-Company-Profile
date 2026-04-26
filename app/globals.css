@@ -1,23 +1,20 @@
 @import "tailwindcss";
 
-/* =========================
-   GLOBAL
-========================= */
+/* GLOBAL */
 body {
-  background: #ffffff;
+  background: linear-gradient(90deg, #ffffff, #E8F3D3);
+  background-attachment: fixed;
   color: #111827;
   transition: all 0.3s ease;
 }
 
-/* 🌙 DARK MODE (SOFT) */
+/* DARK MODE */
 .dark body {
   background: #0f172a;
   color: #e5e7eb;
 }
 
-/* =========================
-   LAYOUT (WAJIB)
-========================= */
+/* LAYOUT */
 .layout {
   display: flex;
   flex-direction: column;
@@ -29,24 +26,37 @@ body {
   padding: 40px 20px 80px;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 nav {
-  backdrop-filter: blur(10px);
+ position: sticky;
+ top:0;
+ z-index:999;
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(12px);
+ background: rgba(255,255,255,.815);
+ border-bottom:1px solid rgba(255,255,255,.3);
 }
 
-/* =========================
-   SECTION GLOBAL
-========================= */
+.dark nav {
+  background: rgba(15, 23, 42, 0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav span {
+  transition: 0.3s;
+}
+
+nav span:hover {
+  color: #2dd486;
+}
+
+/* SECTION GLOBAL */
 section {
   max-width: 1100px;
   margin: 0 auto 60px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
   text-align: center;
   padding: 100px 20px;
@@ -61,9 +71,14 @@ section {
   margin-top: 20px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+.hero-img img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 16px;
+  margin-right: 30px;
+}
+
+/* BUTTON */
 .btn-primary {
   background: #436E44;
   color: white;
@@ -93,9 +108,7 @@ section {
   color: white;
 }
 
-/* =========================
-   ABOUT / SERVICES / CTA
-========================= */
+/* ABOUT / SERVICES / CTA */
 .about-image {
   display: flex;
   align-items: center;
@@ -125,9 +138,7 @@ section {
   display: block;
 }
 
-/* =========================
-   SERVICES & CTA
-========================= */
+/* SERVICES & CTA */
 .services,
 .cta {
   text-align: center;
@@ -142,9 +153,7 @@ section {
   gap: 16px;
 }
 
-/* =========================
-   SERVICES CARD
-========================= */
+/* SERVICES CARD */
 .service-list {
   display: flex;
   gap: 20px;
@@ -172,9 +181,7 @@ section {
   border: 1px solid #334155;
 }
 
-/* =========================
-   LINK
-========================= */
+/* LINK */
 .link {
   display: inline-block;
   margin-top: 20px;
@@ -186,9 +193,7 @@ section {
   text-decoration: underline;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 .footer {
   padding: 60px 20px 30px;
   background: #f9fafb;
@@ -246,9 +251,7 @@ section {
   color: #cbd5f5;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .about-image {
     flex-direction: column;
@@ -373,6 +376,12 @@ section {
   text-align: center;
 }
 
+.team-page h1 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .team-list {
   display: flex;
   justify-content: center;
@@ -385,17 +394,44 @@ section {
   padding: 20px;
   border-radius: 12px;
   background: white;
-  width: 200px;
+  width: 300px;
+  height: 360px;
   transition: 0.3s;
   text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.team-card h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.team-card p:first-of-type {
+  font-weight: 500;
+  color: #373737;
+}
+
+.team-card p:last-of-type {
+  font-size: 13px;
+  color: #515151;
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  background-color: #75b677;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .team-card img {
   border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* DARK */
