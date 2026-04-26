@@ -32,7 +32,7 @@ export default function Footer() {
             <a href="https://linkedin.com/in/user" target="_blank">
               <Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} />
             </a>
-            <a href="https://youtube.com/@akunmu" target="_blank">
+            <a href="https://youtube.com/@user" target="_blank">
               <Image src="/images/youtube.png" alt="YouTube" width={24} height={24} />
             </a>
           </div>
