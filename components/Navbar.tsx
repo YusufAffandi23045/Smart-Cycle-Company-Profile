@@ -18,7 +18,10 @@ export default function Navbar() {
 
   return (
     <nav style={styles.nav}>
-      <h2>SmartCycle</h2>
+      <div style={styles.logo}>
+        <img src="/logo.png" alt="logo" style={{ width: "35px" }} />
+        <span>SmartCycle</span>
+      </div>
 
       <div style={styles.menu}>
         {navLinks.map((link) => (
@@ -52,6 +55,12 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     padding: "16px 40px",
+  },
+  logo: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    fontWeight: "bold",
   },
   menu: {
     display: "flex",
