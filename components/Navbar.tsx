@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav style={styles.nav}>
       <div style={styles.logo}>
-        <img src="/logo.png" alt="logo" style={{ width: "35px" }} />
+        <img src="/images/logo.png" alt="logo" style={{ width: "35px" }} />
         <span>SmartCycle</span>
       </div>
 
