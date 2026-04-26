@@ -59,9 +59,9 @@ export default function Footer() {
         <div>
           <h3 style={styles.heading}>Help</h3>
           <ul style={styles.list}>
-            <li><Link href="#" style={styles.link}>Pusat Bantuan</Link></li>
-            <li><Link href="#" style={styles.link}>FAQ</Link></li>
-            <li><Link href="#" style={styles.link}>Kebijakan & Privasi</Link></li>
+            <li><Link href="/contact" style={styles.link}>Contact</Link></li>
+            <li><Link href="/faq" style={styles.link}>FAQ</Link></li>
+            <li><Link href="/privacy" style={styles.link}>Kebijakan & Privasi</Link></li>
           </ul>
         </div>
 
