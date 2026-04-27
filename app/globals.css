@@ -252,6 +252,28 @@ section {
   color: #777;
 }
 
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.footer-socials a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease; 
+}
+
+.footer-socials a:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  object-fit: contain;
+}
+
 /* DARK FOOTER */
 .dark .footer {
   background: #020617;
@@ -309,6 +331,23 @@ section {
 .about-img img {
   border-radius: 12px;
   width: 100%;
+}
+
+/* DARK MODE ABOUT */
+
+.dark .about-hero-title,
+.dark .stat-number,
+.dark .about-section-title,
+.dark .how-title {
+  color: #ffffff;
+}
+
+.dark .about-hero-desc,
+.dark .stat-label,
+.dark .about-section-desc,
+.dark .about-list-item,
+.dark .how-desc {
+  color: #cbd5e1;
 }
 
 /* VISI MISI */
@@ -450,6 +489,18 @@ section {
   background: #1e293b;
 }
 
+.dark .team-card h3 {
+  color: #ffffff;
+}
+
+.dark .team-card p:first-of-type {
+  color: #f3f4f6;
+}
+
+.dark .team-card p:last-of-type {
+  color: #cbd5e1;
+}
+
 /* DETAIL */
 .team-detail {
   text-align: center;
@@ -544,6 +595,12 @@ section {
   font-size: 14px;
   color: #555;
   margin: 0;
+}
+
+/* DARK MODE CARD STATISTIK */
+
+.dark .stats-section {
+  background-color: #1e293b;
 }
 
 /* ROW SECTION (Mission, Vision, History) */
@@ -687,7 +744,7 @@ section {
 
 .contact-info-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   font-size: 15px;
   color: #111827;
@@ -695,7 +752,6 @@ section {
 
 .contact-icon {
   font-size: 22px;
-  margin-top: 2px;
 }
 
 .contact-right {
@@ -708,6 +764,17 @@ section {
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+/* DARK MODE CONTACT */
+
+.dark .contact-title,
+.dark .contact-info-item {
+  color: #ffffff; /* Mengubah judul dan list kontak jadi putih bersih */
+}
+
+.dark .contact-desc {
+  color: #cbd5e1; /* Mengubah teks paragraf jadi putih keabu-abuan agar nyaman dibaca */
 }
 
 /* RESPONSIVE CONTACT */
