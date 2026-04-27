@@ -333,6 +333,23 @@ section {
   width: 100%;
 }
 
+/* DARK MODE ABOUT */
+
+.dark .about-hero-title,
+.dark .stat-number,
+.dark .about-section-title,
+.dark .how-title {
+  color: #ffffff;
+}
+
+.dark .about-hero-desc,
+.dark .stat-label,
+.dark .about-section-desc,
+.dark .about-list-item,
+.dark .how-desc {
+  color: #cbd5e1;
+}
+
 /* VISI MISI */
 .vision-mission {
   display: flex;
@@ -568,6 +585,12 @@ section {
   margin: 0;
 }
 
+/* DARK MODE CARD STATISTIK */
+
+.dark .stats-section {
+  background-color: #1e293b;
+}
+
 /* ROW SECTION (Mission, Vision, History) */
 .about-row {
   display: flex;
@@ -729,6 +752,17 @@ section {
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+/* DARK MODE CONTACT */
+
+.dark .contact-title,
+.dark .contact-info-item {
+  color: #ffffff; /* Mengubah judul dan list kontak jadi putih bersih */
+}
+
+.dark .contact-desc {
+  color: #cbd5e1; /* Mengubah teks paragraf jadi putih keabu-abuan agar nyaman dibaca */
 }
 
 /* RESPONSIVE CONTACT */
