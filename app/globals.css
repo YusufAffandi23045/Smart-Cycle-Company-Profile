@@ -252,6 +252,28 @@ section {
   color: #777;
 }
 
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.footer-socials a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease; 
+}
+
+.footer-socials a:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  object-fit: contain;
+}
+
 /* DARK FOOTER */
 .dark .footer {
   background: #020617;

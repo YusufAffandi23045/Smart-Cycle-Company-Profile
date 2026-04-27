@@ -22,18 +22,18 @@ export default function Footer() {
           </p>
 
           {/* SOCIAL MEDIA */}
-          <div style={styles.socials}>
+          <div className="footer-socials">
             <a href="https://x.com/user" target="_blank">
-              <Image src="/images/x.png" alt="X" width={24} height={24} />
+              <Image src="/images/x.png" alt="X" width={24} height={24} className="social-icon" />
             </a>
             <a href="https://instagram.com/user" target="_blank">
-              <Image src="/images/instagram.png" alt="Instagram" width={24} height={24} />
+              <Image src="/images/instagram.png" alt="Instagram" width={24} height={24} className="social-icon" />
             </a>
             <a href="https://linkedin.com/in/user" target="_blank">
-              <Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} />
+              <Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} className="social-icon" />
             </a>
             <a href="https://youtube.com/@user" target="_blank">
-              <Image src="/images/youtube.png" alt="YouTube" width={24} height={24} />
+              <Image src="/images/youtube.png" alt="YouTube" width={36} height={24} className="social-icon" />
             </a>
           </div>
         </div>
