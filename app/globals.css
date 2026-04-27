@@ -687,7 +687,7 @@ section {
 
 .contact-info-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   font-size: 15px;
   color: #111827;
@@ -695,7 +695,6 @@ section {
 
 .contact-icon {
   font-size: 22px;
-  margin-top: 2px;
 }
 
 .contact-right {
