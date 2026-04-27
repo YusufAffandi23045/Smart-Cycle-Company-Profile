@@ -489,6 +489,18 @@ section {
   background: #1e293b;
 }
 
+.dark .team-card h3 {
+  color: #ffffff;
+}
+
+.dark .team-card p:first-of-type {
+  color: #f3f4f6;
+}
+
+.dark .team-card p:last-of-type {
+  color: #cbd5e1;
+}
+
 /* DETAIL */
 .team-detail {
   text-align: center;
