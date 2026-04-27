@@ -15,7 +15,7 @@ export default function Footer() {
               width={40}
               height={40}
             />
-            <h2 style={styles.brandName}>Smat Cycle</h2>
+            <h2 style={styles.brandName}>Smart Cycle</h2>
           </div>
           <p style={styles.desc}>
             Gunakan teknologi untuk mengenali dan membuang sampah dengan benar.
