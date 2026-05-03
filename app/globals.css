@@ -1,23 +1,20 @@
 @import "tailwindcss";
 
-/* =========================
-   GLOBAL
-========================= */
+/* GLOBAL */
 body {
-  background: #ffffff;
+  background: linear-gradient(90deg, #ffffff, #E8F3D3);
+  background-attachment: fixed;
   color: #111827;
   transition: all 0.3s ease;
 }
 
-/* 🌙 DARK MODE (SOFT) */
+/* DARK MODE */
 .dark body {
   background: #0f172a;
   color: #e5e7eb;
 }
 
-/* =========================
-   LAYOUT (WAJIB)
-========================= */
+/* LAYOUT */
 .layout {
   display: flex;
   flex-direction: column;
@@ -29,24 +26,48 @@ body {
   padding: 40px 20px 80px;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 nav {
-  backdrop-filter: blur(10px);
+ position: sticky;
+ top:0;
+ z-index:999;
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(12px);
+ background: rgba(255,255,255,.815);
+ border-bottom:1px solid rgba(255,255,255,.3);
 }
 
-/* =========================
-   SECTION GLOBAL
-========================= */
+.dark nav {
+  background: rgba(15, 23, 42, 0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav span {
+  transition: 0.3s;
+}
+
+nav span:hover {
+  color: #2dd486;
+}
+
+/* SECTION GLOBAL */
 section {
   max-width: 1100px;
   margin: 0 auto 60px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* Override untuk section yang pakai flex */
+.about-hero-section,
+.about-row,
+.contact-section {
+  display: flex !important;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse !important;
+}
+
+/* HERO */
 .hero {
   text-align: center;
   padding: 100px 20px;
@@ -61,26 +82,32 @@ section {
   margin-top: 20px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+.hero-img img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 16px;
+  margin-right: 30px;
+}
+
+/* BUTTON */
 .btn-primary {
-  background: #685aff;
+  background: #436E44;
   color: white;
   padding: 10px 20px;
   margin-right: 10px;
   text-decoration: none;
   border-radius: 6px;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn-primary:hover {
-  background: #4f46e5;
+  background: #436E44;
 }
 
 .btn-secondary {
-  border: 1px solid #685aff;
-  color: #685aff;
+  border: 1px solid #436E44;
+  color: #436E44;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 6px;
@@ -88,13 +115,11 @@ section {
 }
 
 .btn-secondary:hover {
-  background: #685aff;
+  background: #436E44;
   color: white;
 }
 
-/* =========================
-   ABOUT / SERVICES / CTA
-========================= */
+/* ABOUT / SERVICES / CTA */
 .about-image {
   display: flex;
   align-items: center;
@@ -124,9 +149,7 @@ section {
   display: block;
 }
 
-/* =========================
-   SERVICES & CTA
-========================= */
+/* SERVICES & CTA */
 .services,
 .cta {
   text-align: center;
@@ -135,11 +158,13 @@ section {
 .cta {
   padding: 80px 20px;
   margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-/* =========================
-   SERVICES CARD
-========================= */
+/* SERVICES CARD */
 .service-list {
   display: flex;
   gap: 20px;
@@ -167,13 +192,11 @@ section {
   border: 1px solid #334155;
 }
 
-/* =========================
-   LINK
-========================= */
+/* LINK */
 .link {
   display: inline-block;
   margin-top: 20px;
-  color: #685aff;
+  color: #436E44;
   text-decoration: none;
 }
 
@@ -181,9 +204,7 @@ section {
   text-decoration: underline;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 .footer {
   padding: 60px 20px 30px;
   background: #f9fafb;
@@ -221,7 +242,7 @@ section {
 }
 
 .footer a:hover {
-  color: #685aff;
+  color: #2dd486;
 }
 
 .footer-bottom {
@@ -229,6 +250,28 @@ section {
   margin-top: 40px;
   font-size: 14px;
   color: #777;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.footer-socials a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease; 
+}
+
+.footer-socials a:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  object-fit: contain;
 }
 
 /* DARK FOOTER */
@@ -241,9 +284,7 @@ section {
   color: #cbd5f5;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .about-image {
     flex-direction: column;
@@ -290,6 +331,23 @@ section {
 .about-img img {
   border-radius: 12px;
   width: 100%;
+}
+
+/* DARK MODE ABOUT */
+
+.dark .about-hero-title,
+.dark .stat-number,
+.dark .about-section-title,
+.dark .how-title {
+  color: #ffffff;
+}
+
+.dark .about-hero-desc,
+.dark .stat-label,
+.dark .about-section-desc,
+.dark .about-list-item,
+.dark .how-desc {
+  color: #cbd5e1;
 }
 
 /* VISI MISI */
@@ -368,6 +426,12 @@ section {
   text-align: center;
 }
 
+.team-page h1 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .team-list {
   display: flex;
   justify-content: center;
@@ -380,22 +444,61 @@ section {
   padding: 20px;
   border-radius: 12px;
   background: white;
-  width: 200px;
+  width: 300px;
+  height: 360px;
   transition: 0.3s;
   text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.team-card h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.team-card p:first-of-type {
+  font-weight: 500;
+  color: #373737;
+}
+
+.team-card p:last-of-type {
+  font-size: 13px;
+  color: #515151;
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  background-color: #75b677;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .team-card img {
   border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* DARK */
 .dark .team-card {
   background: #1e293b;
+}
+
+.dark .team-card h3 {
+  color: #ffffff;
+}
+
+.dark .team-card p:first-of-type {
+  color: #f3f4f6;
+}
+
+.dark .team-card p:last-of-type {
+  color: #cbd5e1;
 }
 
 /* DETAIL */
@@ -415,5 +518,349 @@ section {
   .service-item.reverse {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+.about-hero-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.about-hero-left {
+  flex: 1;
+}
+
+.about-hero-title {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.about-hero-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-hero-right {
+  flex: 1;
+}
+
+.about-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* STATISTIK */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  background-color: #f0fdf4;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-icon {
+  font-size: 40px;
+  color: #16a34a;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* DARK MODE CARD STATISTIK */
+
+.dark .stats-section {
+  background-color: #1e293b;
+}
+
+/* ROW SECTION (Mission, Vision, History) */
+.about-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-row-img-wrap {
+  flex: 1;
+}
+
+.about-row-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about-row-text {
+  flex: 1;
+}
+
+.about-section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.about-section-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-list-item {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* HOW WE WORK */
+.how-section {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.how-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.how-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.how-img-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.how-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE ABOUT */
+@media (max-width: 768px) {
+  .about-hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-row,
+  .about-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.contact-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: #111827;
+}
+
+.contact-icon {
+  font-size: 22px;
+}
+
+.contact-right {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contact-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.contact-title {
+  margin-bottom: 10px;
+}
+
+.contact-input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-input:focus {
+  border-color: #436E44;
+}
+
+.contact-status {
+  color: #436E44;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-info {
+  margin: 20px 0 30px;
+  color: #444;
+  line-height: 1;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+/* DARK MODE CONTACT */
+
+.dark .contact-title,
+.dark .contact-info-item {
+  color: #ffffff; 
+}
+
+.dark .contact-info {
+  color: #cbd5e1;
+}
+
+.dark .contact-desc {
+  color: #cbd5e1; 
+}
+
+/* RESPONSIVE CONTACT */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 10px;
+  z-index: 99999;
+  font-size: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup.success {
+  background-color: #4CAF50;
+}
+
+.popup.error {
+  background-color: #f44336;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }

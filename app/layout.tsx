@@ -19,8 +19,8 @@ export default function RootLayout({
             <main className="main">{children}</main>
             <Footer />
           </div>
-  </ThemeProvider>
-</body>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

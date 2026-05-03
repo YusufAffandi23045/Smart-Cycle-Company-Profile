@@ -34,7 +34,7 @@ export default function Home() {
 
         <div className="about-img">
           <Image
-            src="https://images.unsplash.com/photo-1541544741488-5e4298335e4a?auto=format&fit=crop&w=500&q=80"
+            src="/images/image.png"
             alt="Smart Cycle"
             width={500}
             height={400}
