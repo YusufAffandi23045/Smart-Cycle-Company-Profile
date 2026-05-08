@@ -36,6 +36,21 @@ export default function Navbar() {
           </Link>
         ))}
 
+        <Link href="/login">
+        <span
+          style={{
+            background: "#16a34a",
+            color: "white",
+            padding: "6px 14px",
+            borderRadius: "8px",
+            fontWeight: "600",
+            fontSize: "0.9rem",
+          }}
+        >
+          SIGN IN
+        </span>
+      </Link>
+
         {/* 🌙 Dark Mode Button */}
         <button
           onClick={() =>

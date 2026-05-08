@@ -13,10 +13,7 @@ export default function ContactPage() {
   useEffect(() => {
     if (state?.message) {
       setShowPopup(true);
-
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
+      setTimeout(() => setShowPopup(false), 3000);
     }
   }, [state]);
 
@@ -29,7 +26,7 @@ export default function ContactPage() {
       )}
 
       <section className="contact-section">
-
+        
         <div className="contact-left">
           <h1 className="contact-title">Contact Us</h1>
 
@@ -46,27 +43,45 @@ export default function ContactPage() {
           </p>
 
           <form action={formAction} className="contact-form">
-            <input
-              type="text"
-              name="name"
-              placeholder="Nama Anda"
-              required
-              className="contact-input"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Anda"
-              required
-              className="contact-input"
-            />
-            <textarea
-              name="message"
-              placeholder="Pesan Anda"
-              required
-              rows={4}
-              className="contact-input"
-            />
+
+            {/* NAME */}
+            <div className="field-wrap">
+              <input
+                type="text"
+                name="name"
+                placeholder="Nama Anda"
+                className={`contact-input ${state?.errors?.name ? "input-error" : ""}`}
+              />
+              {state?.errors?.name && (
+                <p className="field-error">{state.errors.name}</p>
+              )}
+            </div>
+
+            {/* EMAIL */}
+            <div className="field-wrap">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Anda"
+                className={`contact-input ${state?.errors?.email ? "input-error" : ""}`}
+              />
+              {state?.errors?.email && (
+                <p className="field-error">{state.errors.email}</p>
+              )}
+            </div>
+
+            {/* MESSAGE */}
+            <div className="field-wrap">
+              <textarea
+                name="message"
+                placeholder="Pesan Anda"
+                rows={4}
+                className={`contact-input ${state?.errors?.message ? "input-error" : ""}`}
+              />
+              {state?.errors?.message && (
+                <p className="field-error">{state.errors.message}</p>
+              )}
+            </div>
 
             <SubmitButton />
           </form>
