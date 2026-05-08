@@ -16,7 +16,7 @@ export async function loginAction(
     cookieStore.set("session", "logged-in", {
       httpOnly: true,
       path: "/",
-      maxAge: 60 * 2, // 1 hari
+      maxAge: 60 * 2, // 2 menit
     });
     redirect("/dashboard");
   }
