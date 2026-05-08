@@ -16,6 +16,7 @@ export default function Home() {
             Hubungi Kami
           </Link>
         </div>
+        
       </section>
 
       {/* 🔥 ABOUT + IMAGE */}
