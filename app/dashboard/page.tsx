@@ -9,18 +9,25 @@ export default async function DashboardPage({
 }) {
   const { query } = await searchParams;
 
+  // Mulai query dasar
   let supabaseQuery = getSupabase()
     .from("contacts")
     .select("*")
     .order("created_at", { ascending: false });
 
-  if (query) {
+  // Tambahkan filter HANYA jika query tidak kosong
+  if (query && query.trim() !== "") {
     supabaseQuery = supabaseQuery.or(
-      `name.ilike.%${query}%,email.ilike.%${query}%`
+      `name.ilike.%${query}%,email.ilike.%${query}%,message.ilike.%${query}%`
     );
   }
 
   const { data: contacts, error } = await supabaseQuery;
+
+  // Debug sementara — hapus setelah berhasil
+  console.log("Query:", query);
+  console.log("Jumlah data:", contacts?.length);
+  console.log("Error:", error);
 
   return (
     <div className="dashboard-wrapper">
