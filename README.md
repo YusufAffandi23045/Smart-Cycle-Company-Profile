@@ -1,36 +1,133 @@
-# This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app)
+# Smart Cycle Company Profile
 
-## Getting Started
+Website company profile modern untuk Smart Cycle yang dibuat menggunakan Next.js dengan desain responsif, tampilan clean, dan performa yang optimal di berbagai perangkat.
 
-First, run the development server:
+## Live Demo
+
+🌐 Website  
+https://smart-cycle-company-profile.vercel.app/
+
+💻 Repository  
+https://github.com/YusufAffandi23045/Smart-Cycle-Company-Profile
+
+---
+
+## Tentang Project
+
+Project ini dibuat sebagai website company profile yang menampilkan informasi mengenai Smart Cycle, mulai dari layanan, profil perusahaan, tim, hingga kontak.
+
+Website dirancang dengan tampilan modern dan responsif agar tetap nyaman digunakan pada desktop maupun mobile device.
+
+Project ini dikembangkan sebagai bagian dari tugas Studi Independen dan dikerjakan secara berkelompok.
+
+---
+
+## Fitur
+
+- Responsive Design
+- Modern UI Layout
+- Smooth Scrolling Navigation
+- Hero Section
+- Services Section
+- Team Section
+- Contact Section
+- Mobile Friendly
+- Optimized Performance
+
+---
+
+## Tech Stack
+
+- Next.js
+- React
+- Tailwind CSS
+- TypeScript
+- Supabase
+- Vercel
+
+---
+
+## Libraries & Dependencies
+
+| Library | Kegunaan |
+|---|---|
+| Next.js | Framework React untuk pengembangan web |
+| React | Library frontend utama |
+| React DOM | Rendering React ke browser |
+| Tailwind CSS | Styling website |
+| Supabase JS | Integrasi database dan backend |
+| Next Themes | Theme management |
+| TypeScript | Static typing JavaScript |
+| Zod | Validasi schema dan form |
+| ESLint | Membantu menjaga kualitas code |
+
+---
+
+## Struktur Folder
+
+```bash
+Smart-Cycle-Company-Profile/
+│
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── assets/
+│   └── styles/
+│
+├── package.json
+├── next.config.js
+└── README.md
+```
+
+---
+
+## Cara Menjalankan Project
+
+### Clone Repository
+
+```bash
+git clone https://github.com/YusufAffandi23045/Smart-Cycle-Company-Profile.git
+```
+
+### Masuk ke Folder Project
+
+```bash
+cd Smart-Cycle-Company-Profile
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Jalankan Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Buka di Browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Responsive Support
 
-To learn more about Next.js, take a look at the following resources:
+Website sudah dioptimalkan untuk:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Desktop
+- Mobile
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tujuan Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Belajar pengembangan website modern menggunakan Next.js
+- Melatih kemampuan frontend development
+- Membuat tampilan company profile yang responsive
+- Menjadi project portfolio untuk Studi Independen
