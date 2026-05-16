@@ -27,7 +27,7 @@ export default function Services() {
 
           <div className="service-img">
             <Image
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&q=80"
+              src="https://images.unsplash.com/vector-1738396054607-12b35e7310f4?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Klasifikasi"
               width={500}
               height={350}
@@ -46,7 +46,7 @@ export default function Services() {
 
           <div className="service-img">
             <Image
-              src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=500&q=80"
+              src="https://images.unsplash.com/photo-1635691315495-ff39debe5764?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Pickup"
               width={500}
               height={350}
@@ -66,7 +66,7 @@ export default function Services() {
 
           <div className="service-img">
             <Image
-              src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=500&q=80"
+              src="https://images.unsplash.com/photo-1758599667729-a6f0f8bd213b?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Edukasi"
               width={500}
               height={350}
