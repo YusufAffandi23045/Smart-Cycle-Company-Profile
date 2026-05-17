@@ -1380,12 +1380,9 @@ nav span:hover {
   }
 }
 
-<<<<<<< HEAD
 /* ================================================
    15. RESPONSIVE — SMALL MOBILE (max-width: 480px)
    ================================================ */
-=======
->>>>>>> a033e6a (prepare merge)
 @media (max-width: 480px) {
 
   .footer-container {
@@ -2008,8 +2005,4 @@ nav span:hover {
   .policy-section-card {
     padding: 24px;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a033e6a (prepare merge)

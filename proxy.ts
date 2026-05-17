@@ -12,11 +12,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-<<<<<<< HEAD
   matcher: ["/dashboard/:path*"],
-=======
-  matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|images/|icons/|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.ico$).*)",
-  ],
->>>>>>> a033e6a (prepare merge)
 };
