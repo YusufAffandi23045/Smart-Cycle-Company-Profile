@@ -16,7 +16,10 @@ export default function Home() {
             Hubungi Kami
           </Link>
         </div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> a033e6a (prepare merge)
       </section>
 
       {/* 🔥 ABOUT + IMAGE */}
